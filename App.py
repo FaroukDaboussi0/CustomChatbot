@@ -1,3 +1,17 @@
+#---------------------------------------------
+#---------------------------------------------
+#instalation steps!
+#---------------------------------------------
+#---------------------------------------------
+#python --version must be 3.11.3
+#update the env variable path
+#pip --version must be 23.3.1 
+#run this command : pip install -r Requiment.txt
+#make sure the location of installing 
+#add variable d'envirement  :  OPENAI_API_KEY  value : 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
+#edit database url 
+##run the app with this command
+#python -m  uvicorn App:app --reload
 from sqlalchemy import DateTime
 from fastapi import FastAPI
 import uvicorn
