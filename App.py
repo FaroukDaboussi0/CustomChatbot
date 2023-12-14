@@ -13,7 +13,7 @@
 ##run the app with this command
 #python -m  uvicorn App:app --reload
 from sqlalchemy import DateTime
-from fastapi import FastAPI
+from fastapi import  FastAPI
 import uvicorn
 from openai import OpenAI
 import os 
@@ -28,6 +28,7 @@ from sqlalchemy import ForeignKey
 # -----------------------------------------
 Base = declarative_base()
 engine = create_engine('mysql://root@localhost/bot')
+print(os.environ.get('OPENAI_API_KEY'))
 
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -88,7 +89,7 @@ def generate_response(userid , message) :
 #-----------------------------------------
 #-----------------------------------------
 #init the client openai
- print(os.environ.get('OPENAI_API_KEY'))
+
  client = OpenAI()
 #-----------------------------------------
 #-----------------------------------------
